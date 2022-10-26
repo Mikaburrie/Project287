@@ -53,4 +53,35 @@ set_global_assignment -name VERILOG_FILE Project287.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE modules/counter_10inc1.v
+set_location_assignment PIN_G19 -to val[0]
+set_location_assignment PIN_F19 -to val[1]
+set_location_assignment PIN_E19 -to val[2]
+set_location_assignment PIN_F21 -to val[3]
+set_location_assignment PIN_F18 -to val[4]
+set_location_assignment PIN_E18 -to val[5]
+set_location_assignment PIN_J19 -to val[6]
+set_location_assignment PIN_H19 -to val[7]
+set_location_assignment PIN_J17 -to val[8]
+set_location_assignment PIN_G17 -to val[9]
+set_location_assignment PIN_Y23 -to clk
+set_location_assignment PIN_Y24 -to rst
+set_global_assignment -name VERILOG_FILE testbenches/tb_counter_10inc1.v
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ns" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb_double_counter_800x525 -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME tb_counter_10inc1 -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_counter_10inc1
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_counter_10inc1 -section_id tb_counter_10inc1
+set_global_assignment -name VERILOG_FILE modules/double_counter_800x525.v
+set_global_assignment -name VERILOG_FILE testbenches/tb_double_counter_800x525.v
+set_global_assignment -name EDA_TEST_BENCH_NAME tb_double_counter_800x525 -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_double_counter_800x525
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_double_counter_800x525 -section_id tb_double_counter_800x525
+set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/tb_counter_10inc1.v -section_id tb_counter_10inc1
+set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/tb_double_counter_800x525.v -section_id tb_double_counter_800x525
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
