@@ -5,9 +5,8 @@ module vga(clk, rst, r, g, b, x, y, vga_output_data);
 	output reg [28:0] vga_output_data;
 	output wire [9:0] x, y;
 	
-	double_counter_800x525 counter(clk_25M, rst, x, y);
-	
 	reg clk_25M;
+	double_counter_800x525 counter(clk_25M, rst, x, y);
 	
 	always @(posedge clk or negedge rst) begin
 	
