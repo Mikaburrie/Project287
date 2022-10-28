@@ -2,7 +2,7 @@ module tb_vga;
 
 	reg clk;
 	reg rst;
-	wire [25:0] vga_output_data;
+	wire [28:0] vga_output_data;
 	wire [9:0] x, y;
 	
 	vga disp(clk, rst, vga_output_data, x, y);
