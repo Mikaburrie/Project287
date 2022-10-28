@@ -1,5 +1,7 @@
-module Project287(input clk, input rst, output [9:0]val_x, output [9:0]val_y);
+module Project287(input clk, input rst, output [25:0]vga_output_data);
 	
-	double_counter_800x525 pixels(clk, rst, val_x, val_y);
+	wire a, b;
+	
+	vga disp(clk, rst, vga_output_data, a, b);
 
 endmodule

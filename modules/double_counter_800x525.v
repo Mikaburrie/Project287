@@ -23,13 +23,13 @@ module double_counter_800x525(clk, rst, x, y);
 					
 				end else begin
 					// inc y if < 524
-					y <= y + 1;
+					y <= y + 10'd1;
 					
 				end
 				
 			end else begin
 				// inc x if < 799
-				x <= x + 1;
+				x <= x + 10'd1;
 				
 			end
 			

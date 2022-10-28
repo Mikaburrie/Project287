@@ -48,40 +48,62 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
-set_global_assignment -name VERILOG_FILE modules/counter_inc1.v
-set_global_assignment -name VERILOG_FILE Project287.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VERILOG_FILE modules/counter_10inc1.v
-set_location_assignment PIN_G19 -to val[0]
-set_location_assignment PIN_F19 -to val[1]
-set_location_assignment PIN_E19 -to val[2]
-set_location_assignment PIN_F21 -to val[3]
-set_location_assignment PIN_F18 -to val[4]
-set_location_assignment PIN_E18 -to val[5]
-set_location_assignment PIN_J19 -to val[6]
-set_location_assignment PIN_H19 -to val[7]
-set_location_assignment PIN_J17 -to val[8]
-set_location_assignment PIN_G17 -to val[9]
-set_location_assignment PIN_Y23 -to clk
-set_location_assignment PIN_Y24 -to rst
-set_global_assignment -name VERILOG_FILE testbenches/tb_counter_10inc1.v
+set_location_assignment PIN_Y2 -to clk
+set_location_assignment PIN_Y23 -to rst
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ns" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb_double_counter_800x525 -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb_vga -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME tb_counter_10inc1 -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_counter_10inc1
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_counter_10inc1 -section_id tb_counter_10inc1
-set_global_assignment -name VERILOG_FILE modules/double_counter_800x525.v
-set_global_assignment -name VERILOG_FILE testbenches/tb_double_counter_800x525.v
 set_global_assignment -name EDA_TEST_BENCH_NAME tb_double_counter_800x525 -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_double_counter_800x525
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_double_counter_800x525 -section_id tb_double_counter_800x525
+set_global_assignment -name EDA_TEST_BENCH_NAME tb_vga -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_vga
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_vga -section_id tb_vga
 set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/tb_counter_10inc1.v -section_id tb_counter_10inc1
 set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/tb_double_counter_800x525.v -section_id tb_double_counter_800x525
+set_global_assignment -name EDA_TEST_BENCH_FILE testbenches/tb_vga.v -section_id tb_vga
+set_location_assignment PIN_E12 -to vga_output_data[0]
+set_location_assignment PIN_E11 -to vga_output_data[1]
+set_location_assignment PIN_D10 -to vga_output_data[2]
+set_location_assignment PIN_F12 -to vga_output_data[3]
+set_location_assignment PIN_G10 -to vga_output_data[4]
+set_location_assignment PIN_J12 -to vga_output_data[5]
+set_location_assignment PIN_H8 -to vga_output_data[6]
+set_location_assignment PIN_H10 -to vga_output_data[7]
+set_location_assignment PIN_G8 -to vga_output_data[8]
+set_location_assignment PIN_G11 -to vga_output_data[9]
+set_location_assignment PIN_F8 -to vga_output_data[10]
+set_location_assignment PIN_H12 -to vga_output_data[11]
+set_location_assignment PIN_C8 -to vga_output_data[12]
+set_location_assignment PIN_B8 -to vga_output_data[13]
+set_location_assignment PIN_F10 -to vga_output_data[14]
+set_location_assignment PIN_C9 -to vga_output_data[15]
+set_location_assignment PIN_B10 -to vga_output_data[16]
+set_location_assignment PIN_A10 -to vga_output_data[17]
+set_location_assignment PIN_C11 -to vga_output_data[18]
+set_location_assignment PIN_B11 -to vga_output_data[19]
+set_location_assignment PIN_A11 -to vga_output_data[20]
+set_location_assignment PIN_C12 -to vga_output_data[21]
+set_location_assignment PIN_D11 -to vga_output_data[22]
+set_location_assignment PIN_D12 -to vga_output_data[23]
+set_location_assignment PIN_G13 -to vga_output_data[24]
+set_location_assignment PIN_C13 -to vga_output_data[25]
+set_global_assignment -name SDC_FILE Project287.out.sdc
+set_global_assignment -name VERILOG_FILE Project287.v
+set_global_assignment -name VERILOG_FILE modules/counter_10inc1.v
+set_global_assignment -name VERILOG_FILE testbenches/tb_counter_10inc1.v
+set_global_assignment -name VERILOG_FILE modules/double_counter_800x525.v
+set_global_assignment -name VERILOG_FILE testbenches/tb_double_counter_800x525.v
+set_global_assignment -name VERILOG_FILE modules/vga.v
+set_global_assignment -name VERILOG_FILE testbenches/tb_vga.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
