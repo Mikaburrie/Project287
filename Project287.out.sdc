@@ -39,7 +39,7 @@ set_time_format -unit ns -decimal_places 3
 # Create Clock
 #**************************************************************
 
-create_clock -name {vga:disp|clk_25M} -period 40.000 -waveform { 0.000 20.000 } [get_registers {vga:disp|clk_25M}]
+#create_clock -name {vga:disp|clk_25M} -period 40.000 -waveform { 0.000 20.000 } [get_registers {vga:disp|clk_25M}]
 create_clock -name {clk} -period 20.000 -waveform { 0.000 10.000 } [get_ports clk]
 
 
