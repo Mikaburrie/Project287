@@ -19,7 +19,6 @@ output_files
 *.html
 *.jdi
 *.jpg
-*.mif
 *.pin
 *.pof
 *.ptf.*
