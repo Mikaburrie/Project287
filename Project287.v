@@ -35,8 +35,6 @@ module Project287(clk, rst_bc, in_bc, segs);
 	assign data_in = {20'b0, ~in[11:8], in[7:0]};
 	
 	
-	
-	
 	processor PROC(clk_var, rst, data_in, out);
 	
 	x8_seven_segment_signed DISP(out, radix, segs);
@@ -51,7 +49,7 @@ module Project287(clk, rst_bc, in_bc, segs);
 		
 		end else begin
 		
-			if (clk_counter >= (32'b1 << clk_speed)) begin
+			if (clk_counter >= ~(32'hffffffff << clk_speed)) begin
 			
 				clk_counter <= 0;
 				

@@ -20,9 +20,9 @@ module x8_seven_segment_signed(num, radix, segs);
 		segs = {6'b111111, ~num[31], seg7, seg6, seg5, seg4, seg3, seg2, seg1};
 		
 		if (num[31])
-			div0 = -num;
+			div0 = ~num[30:0] + 1'b1;
 		else
-			div0 = num;
+			div0 = num[30:0];
 		
 		div1 = div0 / radix;
 		div2 = div1 / radix;
