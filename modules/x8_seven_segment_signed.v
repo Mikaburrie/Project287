@@ -1,7 +1,6 @@
-module x8_seven_segment_signed(num, segs);
+module x8_seven_segment_signed(num, radix, segs);
 
-	parameter radix = 4'd10;
-
+	input [4:0] radix;
 	input [31:0] num;
 	output reg [55:0] segs;
 	

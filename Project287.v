@@ -28,7 +28,7 @@ module Project287(clk, rst_bc, in_bc, segs);
 	wire [4:0] clk_speed;
 	assign clk_speed = in[16:12];
 	
-	wire [3:0] radix;
+	wire [4:0] radix;
 	assign radix = in[20:17] + 1'b1;
 	
 	wire [31:0] data_in;
@@ -39,7 +39,7 @@ module Project287(clk, rst_bc, in_bc, segs);
 	
 	processor PROC(clk_var, rst, data_in, out);
 	
-	x8_seven_segment_signed DISP(out, segs);
+	x8_seven_segment_signed DISP(out, radix, segs);
 	
 	always @(posedge clk or negedge rst) begin
 		
