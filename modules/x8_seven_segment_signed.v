@@ -40,12 +40,12 @@ endmodule
 
 module seven_segment(num, segs);
 
-	input [3:0] num;
+	input [30:0] num;
 	output reg [6:0] segs;
 
 	always @(*) begin
 	
-		case (num)
+		case (num[3:0])
 		
 			4'h0: segs = 7'b0000001;
 			4'h1: segs = 7'b1001111;

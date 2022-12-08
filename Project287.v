@@ -5,7 +5,7 @@ module Project287(clk, rst_bc, in_bc, segs);
 	output [55:0] segs;
 	
 	wire rst;
-	debouncer RST(clk, rst_bc, rst);
+	debouncer RST(clk, rst_bc, rst_bc, rst);
 	
 	wire [20:0] in;
 	genvar i;
@@ -13,7 +13,7 @@ module Project287(clk, rst_bc, in_bc, segs);
 	
 		for (i = 0; i < 21; i = i + 1) begin : IN_DEBOUNCING
 		
-			debouncer IN(clk, in_bc[i], in[i]);
+			debouncer IN(clk, rst_bc, in_bc[i], in[i]);
 		
 		end
 	
