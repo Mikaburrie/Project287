@@ -228,7 +228,7 @@ module controller(clk, rst, instruction, bus, en, wren, addr_reg, immediate, alu
 							alu_func = 0;
 							next = 0;
 						end
-						4'd3: begin // Add alu to program counter
+						4'd3: begin // Move alu to program counter
 							en = EN_ALU;
 							wren = WREN_CTR;
 							addr_reg = rd;

@@ -9,31 +9,30 @@ module tb_processor;
 	wire [31:0] out;
 	
 	
-	processor proc(clk, rst, in, out);
+	processor PROC(clk, rst, in, out);
 	
-	// Flips clk every 40 ps (25 MHz)
-	always #40 clk = ~clk;
+	// Clock cycle every 20 ps (50MHz)
+	always #10 clk = ~clk;
 	
 	initial begin
 	
 		clk <= 1;
 		rst <= 0;
-		in <= 32'd31;
+		in <= 32'b00000000000000000000000000000000;
 		
 		#40
 		
 		rst <= 1;
 		
+		#1000
 		
-		#3000;
+		in <= 21'b000000000000100000001;
 		
-		rst <= 0;
+		#5000;
 		
-		#100
+		in <= 21'b000000000000000000001;
 		
-		rst <= 1;
-		
-		#5000 $finish;
+		#1000 $finish;
 		
 	end
 
